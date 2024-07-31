@@ -1,0 +1,142 @@
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+body{
+  background-color: black;
+  color: whitesmoke;
+}
+button {
+  margin-top: 30px;
+  padding: 15px 20px;
+  width: 200px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: blanchedalmond ;
+  z-index: 1;
+}
+button::after,
+button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+button::after {
+  transform: translate(11px, 11px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+button:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+/* Styles for the tooltip button */
+.tooltip {
+  position: relative;
+  background-color: #4CAF50; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tooltip text */
+.tooltiptext {
+  font-size: large;
+  visibility: hidden;
+  width: 380px;
+  background-color: black; /* Tooltip background color */
+  color: white; /* Tooltip text color */
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  transform: translateX(-50%);
+}
+.card {
+  width: 60%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-weight: 900;
+  transition-duration: 0.2s;
+  background: #000000;
+  box-shadow: 15px 15px 30px #370000,
+              -15px -15px 30px #3e0000;
+  margin: auto; 
+}
+
+.card p{
+  margin-left: 20px;
+
+}
+
+.card h3{
+  margin-left: 20px;
+}
+
+.card p{
+  margin-left: 20px;
+}
+
+.card h3{
+  margin-left: 20px;
+}

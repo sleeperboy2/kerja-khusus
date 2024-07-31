@@ -1,0 +1,46 @@
+/* styles.css */
+
+#dataTables-example th,
+#dataTables-example td {
+    text-align: left;
+    padding: 8px;
+}
+
+#dataTables-example th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+#dataTables-example td {
+    border: 1px solid #ddd;
+}
+
+#dataTables-example th:nth-child(1),
+#dataTables-example td:nth-child(1) {
+    width: 10%;
+}
+
+#dataTables-example th:nth-child(2),
+#dataTables-example td:nth-child(2) {
+    width: 10%;
+}
+
+#dataTables-example th:nth-child(3),
+#dataTables-example td:nth-child(3) {
+    width: 10%;
+}
+
+#dataTables-example th:nth-child(4),
+#dataTables-example td:nth-child(4) {
+    width: 10%;
+}
+
+#dataTables-example th:nth-child(5),
+#dataTables-example td:nth-child(5) {
+    width: 25%;
+}
+
+#dataTables-example th:nth-child(6),
+#dataTables-example td:nth-child(6) {
+    width: 25%;
+}

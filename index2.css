@@ -1,0 +1,210 @@
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+    font-family: "Times New Roman", Times, serif;
+    font-size: large;
+}
+
+.w3-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.w3-image {
+    border-color: white;
+    align-items: center;
+    margin-left: 15%;
+} 
+
+.w3-bar {
+    background-color: black; 
+    color: white; 
+}
+
+/* Hover effect */
+.w3-bar a:hover {
+    background-color: blue; 
+    color: black; /* Change text color on hover */
+}
+
+/* Create a new class for the parallax effect */
+.parallax-header {
+    height: 99vh;
+    background-image: url('https://i.pinimg.com/originals/ef/9e/ce/ef9ece421400789a25abefd206f3e2bf.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-container {
+ font-family: Times New Roman, Times, serif;  font-size:large;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust alignment as needed */
+    gap: 20px; /* Add space between cards */
+  }
+
+.card {
+  font-family: Times New Roman, Times, serif; 
+  font-size:large;
+    width: calc(33.33% - 10px);
+    width: 420px;
+    height: 254px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #ff0000;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    margin-bottom: 100px;
+    background-image: url('img/1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+   
+   .card-details {
+    color: rgb(255, 255, 255);
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(35, 35, 35);
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #ffffff;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+
+   .bottom-row {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    /* Additional styles for the bottom row cards */
+  }
+
+  /* Style for the member sections */
+.w3-row-padding {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.w3-col {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .w3-col {
+    flex: 0 0 30%; /* Adjust this value according to your layout */
+    max-width: 30%; /* Adjust this value according to your layout */
+  }
+}
+
+.w3-margin-bottom img {
+  width: 100%;
+  height: auto;
+  border-radius: 1%;
+  border: 1px solid #fff; /* White border around the images */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for images */
+}
+
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: whitesmoke;
+  color: black;
+}
+
+button {
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ button::before, button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ button:hover::before, button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ button:hover {
+  color: rgb(255, 255, 255);
+ }
+ 
+ button:active {
+  filter: brightness(.8);
+ }
+ 

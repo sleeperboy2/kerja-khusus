@@ -1,0 +1,148 @@
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="img/drum.jpeg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>SMKS2</b></span> <span class="w3-hide-small w3-text-light-grey">Kelab Muzik</span></h1>
+  </div>
+</header>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>SMKS2</b> Muzik</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Program</a>
+      <a href="#about" class="w3-bar-item w3-button">Tentang Kami</a>
+      <a href="laporan.php" class="w3-bar-item w3-button">Laporan</a>
+      <a href="logout.php" class="w3-bar-item w3-button">Log Keluar</a>
+    </div>
+  </div>
+</div>
+
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="img/member1.jpg" alt="John" style="width:100%">
+      <h3>Kaviraj</h3>
+      <p class="w3-opacity">PENGURUSI</p>
+      <p>merupakan antara ahli yang aktif dalam kelab ini</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="img/member2.jpg" alt="jon" style="width:100%">
+      <h3>Johnathan</h3>
+      <p class="w3-opacity">AJK 1</p>
+      <p>pemain gitar terbaik sekolah</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="img/member3.jpg" alt="eve" style="width:100%">
+      <h3>Evelyn</h3>
+      <p class="w3-opacity">AJK 2</p>
+      <p>penyanyi terbaik sekolah</p>
+    </div>
+    
+  </div>
+
+
+.parallax-header {
+  height: 99vh; 
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image: url('https://i.pinimg.com/originals/ef/9e/ce/ef9ece421400789a25abefd206f3e2bf.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+.header-content {
+  /* Center align content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-content h1 {
+  color: whitesmoke;
+  margin-top: 15%;
+
+}
+
+.header-content p {
+  color: black;
+}
+
+<script src="offlinePopup.js"></script>
+<script src="hi.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="scroll.js"></script>
+
+
+<!-- Slideshow next/previous buttons -->
+    <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+      <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+      <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+    
+      <div class="w3-center">
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+    </div>
+  </div>
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+
+
+   <button onclick="printTable()">Cetak Laporan</button>
+
+<script>
+function printTable() {
+  var content = document.querySelector('.table-responsive').innerHTML;
+  var newWindow = window.open('', '_blank');
+  newWindow.document.open();
+  newWindow.document.write(
+    '<html><head><title>Laporan Kelab Muzik</title>' +
+    '<style>' +
+    'body {background-color:white; display: flex; margin-left:10px  height: 100vh; margin: 0; }' +
+    '.table-content { max-width: 80%; }' +
+    '.table-content table { width: 100%; border-collapse: collapse; }' +
+    '.table-content table, .table-content th, .table-content td { border: 1px solid #000; padding: 8px; }' +
+    '</style></head>' +
+    '<body><div class="table-content"><table>' + content + '</table></div></body></html>'
+  );
+  newWindow.document.close();
+  newWindow.print();
+}
+
+</script>
